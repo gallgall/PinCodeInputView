@@ -23,6 +23,9 @@ enum Validator {
     }
     
     static func isPinCode(text: String, digit: Int) -> Bool {
+        if text.isEmpty {
+            return true
+        }
         if text.count == digit, isOnlyNumeric(text: text) {
             return true
         }
